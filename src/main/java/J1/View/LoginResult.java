@@ -1,35 +1,44 @@
 package J1.View;
 
-public class LoginResult {
-        private String status;
+import J1.Model.User;
+
+public class LoginResult extends Result<User> {
         private boolean isLogin;
-        private String avatar;
-        private Object data;
 
-
-        public LoginResult(String status,boolean isLogin, String avatar,Object data) {
-            this.status = status;
-            this.isLogin = isLogin;
-            this.avatar = avatar;
-            this.data = data;
+        public LoginResult(String status, boolean isLogin) {
+            this(status, null, isLogin, null);
         }
 
-    public String getStatus() {
-        return status;
+        public LoginResult(String status, String msg, boolean isLogin) {
+            this(status, msg, isLogin, null);
+        }
+
+        public LoginResult(String status, String msg, boolean isLogin, User data) {
+            super(status,msg,data);
+            this.isLogin = isLogin;
+        }
+
+        public static LoginResult success(String msg) {
+            return new LoginResult("ok", msg, true, null);
+        }
+
+        public static LoginResult success(String msg, boolean isLogin) {
+            return new LoginResult("ok", msg, isLogin, null);
+        }
+
+        public static LoginResult success(String msg, User data) {
+            return new LoginResult("ok", msg, true, data);
+        }
+
+        public static LoginResult failure(String msg) {
+            return new LoginResult("fail", msg, false, null);
+        }
+
+        public boolean isLogin() {
+            return isLogin;
+        }
+
     }
 
-    public boolean isLogin() {
-        return isLogin;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-}
 
 

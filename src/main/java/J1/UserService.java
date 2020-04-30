@@ -1,19 +1,15 @@
 package J1;
 
-import J1.Model.Mapper.UserMapper;
+import J1.Model.Dao.UserMapper;
 import J1.Model.User;
-import org.apache.ibatis.annotations.Insert;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.time.Instant;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class UserService implements UserDetailsService{
