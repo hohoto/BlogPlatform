@@ -1,8 +1,6 @@
 package J1.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sun.javafx.beans.IDProperty;
-
 import javax.persistence.*;
 import java.time.Instant;
 
