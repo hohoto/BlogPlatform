@@ -1,7 +1,7 @@
-package J1;
+package blogPlatform;
 
-import J1.Model.Dao.UserMapper;
-import J1.Model.User;
+import blogPlatform.model.dao.UserMapper;
+import blogPlatform.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

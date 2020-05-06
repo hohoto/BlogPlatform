@@ -1,6 +1,6 @@
-package J1.Controller;
+package blogPlatform.controller;
 
-import J1.Model.Blog;
+import blogPlatform.model.Blog;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

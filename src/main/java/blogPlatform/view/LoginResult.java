@@ -1,6 +1,6 @@
-package J1.View;
+package blogPlatform.view;
 
-import J1.Model.User;
+import blogPlatform.model.User;
 
 public class LoginResult extends Result<User> {
         private boolean isLogin;

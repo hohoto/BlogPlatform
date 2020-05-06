@@ -1,6 +1,6 @@
-package J1.Controller;
+package blogPlatform.controller;
 
-import J1.BlogService;
+import blogPlatform.BlogService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

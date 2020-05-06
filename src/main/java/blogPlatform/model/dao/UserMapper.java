@@ -1,6 +1,6 @@
-package J1.Model.Dao;
+package blogPlatform.model.dao;
 
-import J1.Model.User;
+import blogPlatform.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

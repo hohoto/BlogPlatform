@@ -1,6 +1,6 @@
-package J1;
+package blogPlatform;
 
-import J1.Model.Dao.BlogDao;
+import blogPlatform.model.dao.BlogDao;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

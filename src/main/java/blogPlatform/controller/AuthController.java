@@ -1,9 +1,9 @@
-package J1.Controller;
+package blogPlatform.controller;
 
 
-import J1.Model.User;
-import J1.UserService;
-import J1.View.LoginResult;
+import blogPlatform.model.User;
+import blogPlatform.UserService;
+import blogPlatform.view.LoginResult;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

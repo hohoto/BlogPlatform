@@ -1,6 +1,6 @@
-package J1.Controller;
+package blogPlatform.controller;
 
-import J1.UserService;
+import blogPlatform.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,12 +13,10 @@ import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import javax.servlet.http.HttpSession;
@@ -27,7 +25,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -59,7 +56,7 @@ class AuthControllerTest {
         usernameAndPassword.put("username","testuser");
         usernameAndPassword.put("password",bCryptPasswordEncoder.encode("encodedtesting"));
         Mockito.when(userService.loadUserByUsername("testuser")).thenReturn(new User("testuser","encodedtesting", Collections.emptyList()));
-        Mockito.when(userService.getUserByUsername("testuser")).thenReturn(new J1.Model.User(1,"testuser","encodedtesting"));
+        Mockito.when(userService.getUserByUsername("testuser")).thenReturn(new blogPlatform.model.User(1,"testuser","encodedtesting"));
         MvcResult response = mvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON_UTF8).
                 content(new ObjectMapper().writeValueAsString(usernameAndPassword))).andExpect(status().isOk()).
                 andExpect(mvcResult ->

@@ -1,9 +1,8 @@
-package J1.Model;
+package blogPlatform.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
 @Table(name = "blog")
@@ -12,9 +11,6 @@ public class Blog<User> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer blogId;
-    @Column(name = "user_id")
-    @JsonIgnore
-    private Integer userId;
     @Column(name = "title")
     private String title;
     @Column(name = "description")
@@ -25,8 +21,9 @@ public class Blog<User> {
     private String createdAt;
     @Column(name = "updated_at")
     private String updatedAt;
-
-    private User user;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private blogPlatform.model.User user;
 
     public Integer getPage() {
         return page;
@@ -42,14 +39,6 @@ public class Blog<User> {
 
     public void setBlogId(Integer blogId) {
         this.blogId = blogId;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
     }
 
     public String getDescription() {
@@ -92,11 +81,11 @@ public class Blog<User> {
         this.updatedAt = updatedAt;
     }
 
-    public User getUser() {
+    public blogPlatform.model.User getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(blogPlatform.model.User user) {
         this.user = user;
     }
 }

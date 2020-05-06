@@ -1,8 +1,6 @@
-package J1.View;
+package blogPlatform.view;
 
-import J1.Model.Blog;
-
-import java.util.List;
+import blogPlatform.model.Blog;
 
 public class BlogResult extends Result<Blog> {
     public BlogResult(String status, String msg, Blog data) {

@@ -1,6 +1,6 @@
-package J1.Model.Dao;
+package blogPlatform.model.dao;
 
-import J1.Model.Blog;
+import blogPlatform.model.Blog;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package J1;
+package blogPlatform;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

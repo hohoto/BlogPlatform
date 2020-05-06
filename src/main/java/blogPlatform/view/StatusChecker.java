@@ -1,6 +1,4 @@
-package J1.View;
-
-import J1.Model.User;
+package blogPlatform.view;
 
 public class StatusChecker {
         private String status;

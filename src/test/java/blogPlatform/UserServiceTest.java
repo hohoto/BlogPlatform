@@ -1,7 +1,7 @@
-package J1;
+package blogPlatform;
 
-import J1.Model.Dao.UserMapper;
-import J1.Model.User;
+import blogPlatform.model.dao.UserMapper;
+import blogPlatform.model.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

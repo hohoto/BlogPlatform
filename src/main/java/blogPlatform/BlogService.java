@@ -1,7 +1,7 @@
-package J1;
+package blogPlatform;
 
-import J1.Model.Blog;
-import J1.Model.Dao.BlogDao;
+import blogPlatform.model.Blog;
+import blogPlatform.model.dao.BlogDao;
 
 import javax.inject.Inject;
 import java.util.List;

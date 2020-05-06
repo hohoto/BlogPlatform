@@ -1,4 +1,4 @@
-package J1.View;
+package blogPlatform.view;
 
 public class Result<T> {
         private String status;

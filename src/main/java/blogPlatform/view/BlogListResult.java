@@ -1,6 +1,6 @@
-package J1.View;
+package blogPlatform.view;
 
-import J1.Model.Blog;
+import blogPlatform.model.Blog;
 
 import java.util.List;
 

@@ -1,8 +1,10 @@
-package J1.Model;
+package blogPlatform.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -26,6 +28,11 @@ public class User {
 
     @Column(name = "updated_at")
     private Instant updatedAt;
+
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            mappedBy = "user")
+    private List<Blog<User>> blogs;
 
     public User(Integer id,String username,String encryptedPassword){
         this.id=id;

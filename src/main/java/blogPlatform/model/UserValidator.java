@@ -1,4 +1,4 @@
-package J1.Model;
+package blogPlatform.model;
 
 public class UserValidator {
     private boolean userValidator;
